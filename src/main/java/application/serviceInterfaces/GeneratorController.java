@@ -3,6 +3,7 @@ package application.serviceInterfaces;
 import domain.businessRules.BusinessRule;
 
 public class GeneratorController {
-    private BusinessRule businessRule;
-
+    public String generateBusinessRuleQuery(BusinessRule businessRule){
+        return generateBusinessRuleQuery(businessRule);
+    }
 }

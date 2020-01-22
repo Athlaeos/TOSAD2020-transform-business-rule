@@ -14,4 +14,35 @@ public class AttributeRangeRule extends BusinessRule{
         this.CompareValue2 = CompareValue2;
     }
 
+    public boolean isNotter() {
+        return notter;
+    }
+
+    public void setNotter(boolean notter) {
+        this.notter = notter;
+    }
+
+    public String getOperatorValue() {
+        return operatorValue;
+    }
+
+    public void setOperatorValue(String operatorValue) {
+        this.operatorValue = operatorValue;
+    }
+
+    public String getCompareValue() {
+        return CompareValue;
+    }
+
+    public void setCompareValue(String compareValue) {
+        CompareValue = compareValue;
+    }
+
+    public String getCompareValue2() {
+        return CompareValue2;
+    }
+
+    public void setCompareValue2(String compareValue2) {
+        CompareValue2 = compareValue2;
+    }
 }
