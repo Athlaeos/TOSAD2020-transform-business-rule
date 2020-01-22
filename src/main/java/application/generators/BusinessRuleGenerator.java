@@ -1,12 +1,15 @@
 package application.generators;
 
-import domain.businessRules.BusinessRule;
+import domain.businessRules.AttributeRangeRule;
 
 public abstract class BusinessRuleGenerator {
-    private BusinessRule businessRule;
 
-    public BusinessRuleGenerator(BusinessRule businessRule) {
+    public BusinessRuleGenerator(){
 
-        this.businessRule = businessRule;
+    }
+
+    public String generateTrigger(AttributeRangeRule attributeRangeRule) {
+        AttributeRangeRuleGenerator attributeRangeRuleGenerator = new AttributeRangeRuleGenerator();
+        return attributeRangeRuleGenerator.generateAttributeRangeRuleTrigger(attributeRangeRule);
     }
 }

@@ -4,10 +4,11 @@ import domain.businessRules.AttributeRangeRule;
 
 public class AttributeRangeRuleGenerator {
 
+    public AttributeRangeRuleGenerator(){
+    }
 
-
-    public String generateAttributeRangeRuleConstraint( ){
-        return  "" +
+    public String generateAttributeRangeRuleTrigger(AttributeRangeRule attributeRangeRule){
+        return  "" + 
                 "" +
                 "" +
                 "" +
