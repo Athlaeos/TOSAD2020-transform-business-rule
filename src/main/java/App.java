@@ -1,11 +1,6 @@
 import com.fasterxml.jackson.databind.ObjectMapper;
 import domain.businessRules.AttributeRangeRule;
-import domain.businessRules.BusinessRule;
-import jdk.internal.org.objectweb.asm.TypeReference;
-import org.w3c.dom.Attr;
-
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Map;
 
 public class App {
