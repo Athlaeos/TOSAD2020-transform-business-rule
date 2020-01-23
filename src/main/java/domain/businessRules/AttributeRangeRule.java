@@ -1,5 +1,8 @@
 package domain.businessRules;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 public class AttributeRangeRule extends BusinessRule{
     private boolean notter;
     private String operatorValue;
@@ -44,5 +47,11 @@ public class AttributeRangeRule extends BusinessRule{
 
     public void setCompareValue2(String compareValue2) {
         CompareValue2 = compareValue2;
+    }
+
+    public String toJson() throws JsonProcessingException {
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        return objectMapper.writeValueAsString(this);
     }
 }
