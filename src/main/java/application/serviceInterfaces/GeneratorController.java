@@ -8,12 +8,15 @@ public class GeneratorController {
     public GeneratorController(){
     }
 
-    public String generateBusinessRuleTriggerQuery(AttributeRangeRule attributeRangeRule){
-        AttributeRangeRuleGenerator attributeRangeRuleGenerator = new AttributeRangeRuleGenerator();
-        return attributeRangeRuleGenerator.generateAttributeRangeRuleTrigger(attributeRangeRule);
+    public AttributeRangeRuleGenerator generateAttributeRangeRuleGenerator(){
+        return new AttributeRangeRuleGenerator();
     }
 
-    public String generateBusinesRuleTriggerQuery(){
+    public String generateBusinessRuleTriggerQuery(AttributeRangeRule attributeRangeRule){
+        return generateAttributeRangeRuleGenerator().generateAttributeRangeRuleTrigger(attributeRangeRule);
+    }
 
+    public String generateBusinessRuleConstraintrQuery(AttributeRangeRule attributeRangeRule){
+        return generateAttributeRangeRuleGenerator().generateAttributeRangeRuleContstraint(attributeRangeRule);
     }
 }

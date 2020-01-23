@@ -56,6 +56,8 @@ public class AttributeRangeRuleGenerator {
 	}
 
 	public String generateAttributeRangeRuleContstraint(AttributeRangeRule attributeRangeRule){
-
+        return String.format("ALTER TABLE %s %n"
+                + "ADD CONSTRAINT %s %n"
+                + "CHECK (%s BETWEEN %s AND %s)", attributeRangeRule.getTableName(), attributeRangeRule.getName(), attributeRangeRule.getOperatorValue(), attributeRangeRule.getCompareValue(), attributeRangeRule.getCompareValue2());
     }
 }

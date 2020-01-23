@@ -11,8 +11,16 @@ public class Controller {
         return attributeRangeRule;
     }
 
-    public String generateAttributeRangeRuleQuery(AttributeRangeRule attributeRangeRule){
-        GeneratorController generatorController = new GeneratorController();
-        return generatorController.generateBusinessRuleQuery(attributeRangeRule);
+    public GeneratorController generatorController(){
+        return new GeneratorController();
+
+    }
+
+    public String generateAttributeRangeRuleTriggerQuery(AttributeRangeRule attributeRangeRule){
+        return generatorController().generateBusinessRuleTriggerQuery(attributeRangeRule);
+    }
+
+    public String generateAttributeRangeRuleConstraintQuery(AttributeRangeRule attributeRangeRule){
+        return generatorController().generateBusinessRuleConstraintrQuery(attributeRangeRule);
     }
 }
