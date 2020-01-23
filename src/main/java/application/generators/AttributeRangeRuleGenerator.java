@@ -27,7 +27,7 @@ public class AttributeRangeRuleGenerator {
         		+ "v_operatorvalue varchar(50) = '%s'; %n"
         		+ "v_comparevalue1 varchar(50) = '%s'; %n"
         		+ "v_comparevalue2 varchar(50) = '%s'; %n"
-        		+ "v_notter char(1) = %s; %n"
+        		+ "v_notter char(1) = '%s'; %n"
         		+ "v_passed char(1); %n"
         		+ "BEGIN %n"
         		+ "IF v_notter == 'Y' THEN %n"
