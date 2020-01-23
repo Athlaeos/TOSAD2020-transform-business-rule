@@ -1,15 +1,11 @@
 package application.serviceInterfaces;
 
 import application.generators.AttributeRangeRuleGenerator;
-import application.generators.BusinessRuleGenerator;
 import domain.businessRules.AttributeRangeRule;
-import domain.businessRules.BusinessRule;
-import sun.nio.cs.Surrogate;
 
 public class GeneratorController {
 
     public GeneratorController(){
-
     }
 
     public String generateBusinessRuleQuery(AttributeRangeRule attributeRangeRule){
