@@ -8,15 +8,10 @@ public class AttributeRangeRuleGenerator {
     }
 
     public String generateAttributeRangeRuleTrigger(AttributeRangeRule attributeRangeRule){
-        return  "" + 
-                "" +
-                "" +
-                "" +
-                "" +
-                "" +
-                "" +
-                "" +
-                "" +
-                "";
+        String forEachRow = "";
+
+        if (attributeRangeRule.isForEachRow() == true) {
+            forEachRow = "FOR EACH ROW";
+        }
     }
 }

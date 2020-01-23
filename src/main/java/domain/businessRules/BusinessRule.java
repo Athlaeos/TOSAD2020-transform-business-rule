@@ -7,14 +7,16 @@ public abstract class BusinessRule {
     private String event;
     private boolean forEachRow;
     private String errorMessage;
+    private String tableName;
 
-    public BusinessRule(String name, String description, String when, String event, boolean forEachRow, String errorMessage){
+    public BusinessRule(String name, String description, String when, String event, boolean forEachRow, String errorMessage, String tableName){
         this.name = name;
         this.description = description;
         this.when = when;
         this.event = event;
         this.forEachRow = forEachRow;
         this.errorMessage = errorMessage;
+        this.tableName = tableName;
     }
 
     public String getName() {
@@ -64,5 +66,7 @@ public abstract class BusinessRule {
     public void setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
     }
+
+    public String getTableName() { return this.tableName; }
 }
 
