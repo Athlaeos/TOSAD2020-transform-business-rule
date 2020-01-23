@@ -4,10 +4,19 @@ import domain.businessRules.AttributeRangeRule;
 
 public class AttributeRangeRuleGenerator {
 
+	private String forEachRow = "";
+	private String notter = "N";
+	
     public AttributeRangeRuleGenerator(){
     }
 
     public String generateAttributeRangeRuleTrigger(AttributeRangeRule attributeRangeRule){
+    	if (attributeRangeRule.isForEachRow()) {
+    		forEachRow = "FOR EACH ROW";
+    	}
+    	if (attributeRangeRule.isNotter()) {
+    		notter = "Y";
+    	}
         return  String.format("CREATE OR REPLACE TRIGGER %s%n"
         		+ "--%s %n"
         		+ "%s %s ON %s%n"
@@ -42,6 +51,7 @@ public class AttributeRangeRuleGenerator {
         		+ "WHEN e_customexception THEN %n"
         		+ "dbms_output.put_line(v_errormessage); %n"
         		+ "END; %n", attributeRangeRule.getName(), attributeRangeRule.getDescription(),attributeRangeRule.getWhen(), attributeRangeRule.getEvent(),
-        		attributeRangeRule.getTableName());
-    }
+        		attributeRangeRule.getTableName(), forEachRow, attributeRangeRule.getErrorMessage(), attributeRangeRule.getOperatorValue(), 
+				attributeRangeRule.getCompareValue(), attributeRangeRule.getCompareValue2(), notter);
+	}
 }
