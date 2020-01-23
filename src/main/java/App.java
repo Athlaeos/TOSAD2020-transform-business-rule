@@ -22,7 +22,9 @@ public class App {
         AttributeRangeRule attributeRangeRule = null;
         attributeRangeRule = controller.mapToRangeRule(defineInput);
 //        AttributeRangeRule attributeRangeRule = controller.createAttributeRangeRule(true,"test1","test2","test3","test4","test5","test6","test7",true,"test8","test9");
+        System.out.println("------------------------ TRIGGER --------------------------");
         System.out.println(controller.generateAttributeRangeRuleTriggerQuery(attributeRangeRule));
+        System.out.println("----------------------- CONSTRAINT ------------------------");
         System.out.println(controller.generateAttributeRangeRuleConstraintQuery(attributeRangeRule));
     }
 }
