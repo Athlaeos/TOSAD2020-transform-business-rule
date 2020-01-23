@@ -1,8 +1,5 @@
 import application.serviceInterfaces.Controller;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import domain.businessRules.AttributeRangeRule;
-import java.io.IOException;
-import java.util.Map;
 
 public class App {
     public static void main( String[] args ){

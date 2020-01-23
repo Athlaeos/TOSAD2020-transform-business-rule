@@ -54,4 +54,8 @@ public class AttributeRangeRuleGenerator {
         		attributeRangeRule.getTableName(), forEachRow, attributeRangeRule.getErrorMessage(), attributeRangeRule.getOperatorValue(), 
 				attributeRangeRule.getCompareValue(), attributeRangeRule.getCompareValue2(), notter);
 	}
+
+	public String generateAttributeRangeRuleContstraint(AttributeRangeRule attributeRangeRule){
+
+    }
 }
